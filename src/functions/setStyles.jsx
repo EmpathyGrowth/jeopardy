@@ -1,5 +1,4 @@
 export function cx(styles, moduleClasslist, globalClasslist) {
-  
   let mc = moduleClasslist
     .trim()
     .split(/\s+/)
@@ -9,5 +8,9 @@ export function cx(styles, moduleClasslist, globalClasslist) {
 
   let gc = globalClasslist.trim();
 
-  return mc + " " + gc;
+  let classlist = mc + " " + gc;
+  classlist = classlist.trim();
+  return classlist;
 }
+
+// figure out optimisations with white space removal!
